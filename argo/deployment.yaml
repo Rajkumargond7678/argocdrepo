@@ -35,4 +35,12 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: ClusterIP
+  type: NodePort
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: my-namespace
+  labels:
+    name: my-namespace
+
